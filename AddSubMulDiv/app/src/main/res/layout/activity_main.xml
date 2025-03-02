@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -28,12 +29,6 @@
             android:layout_marginTop="2dp"
             android:hint="Mời nhập số ở đây" />
     </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="20dp"
-        android:background="@color/black">
-    </LinearLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="100dp"
@@ -63,22 +58,56 @@
         android:orientation="horizontal"
         android:layout_marginTop="15dp">
 
+
       <Button
           android:layout_width="wrap_content"
           android:layout_height="match_parent"
+          android:paddingLeft="30dp"
+          android:layout_margin="7dp"
+          android:onClick="XuLyCong"
           android:text="+"/>
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_margin="7dp"
+            android:onClick="XuLyTru"
             android:text="-"/>
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_margin="7dp"
+            android:onClick="XuLyNhan"
             android:text="*"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_margin="7dp"
+            android:onClick="XuLyChia"
             android:text="/"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:padding="5dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp">
+        <TextView
+            android:layout_marginTop="9dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Kết Quả"
+            android:textSize="30dp"
+            android:textColor="#00BCD4"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="2dp"
+            android:hint="Nơi hiển thị kết quả" />
     </LinearLayout>
 
 </LinearLayout>
