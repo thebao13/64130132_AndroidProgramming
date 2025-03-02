@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+        <!-- Ô nhập chiều cao -->
+        <EditText
+            android:id="@+id/heightInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nhập chiều cao (cm)"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Ô nhập cân nặng -->
+        <EditText
+            android:id="@+id/weightInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nhập cân nặng (kg)"
+            android:inputType="numberDecimal"
+            android:layout_below="@id/heightInput"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Nút tính BMI -->
+        <Button
+            android:id="@+id/calculateButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tính BMI"
+            android:layout_below="@id/weightInput"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Ô hiển thị kết quả BMI -->
+        <TextView
+            android:id="@+id/resultText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kết quả BMI sẽ hiển thị ở đây"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:layout_below="@id/calculateButton"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Ô hiển thị phân loại BMI -->
+        <TextView
+            android:id="@+id/categoryText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Phân loại BMI sẽ hiển thị ở đây"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:layout_below="@id/resultText"
+            android:layout_marginTop="16dp"/>
+</LinearLayout>
