@@ -23,6 +23,7 @@
             android:textColor="#00BCD4"/>
 
         <EditText
+            android:id="@+id/edtSo1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -44,6 +45,7 @@
             android:textSize="30dp"
             android:textColor="#00BCD4"/>
         <EditText
+            android:id="@+id/edtSo2"
             android:layout_marginTop="2dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -60,6 +62,7 @@
 
 
       <Button
+          android:id="@+id/btnCong"
           android:layout_width="wrap_content"
           android:layout_height="match_parent"
           android:paddingLeft="30dp"
@@ -68,6 +71,7 @@
           android:text="+"/>
 
         <Button
+            android:id="@+id/btnTru"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_margin="7dp"
@@ -75,12 +79,14 @@
             android:text="-"/>
 
         <Button
+            android:id="@+id/btnNhan"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_margin="7dp"
             android:onClick="XuLyNhan"
             android:text="*"/>
         <Button
+            android:id="@+id/btnChia"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_margin="7dp"
@@ -103,6 +109,7 @@
             android:textColor="#00BCD4"/>
 
         <EditText
+            android:id="@+id/edtKetQua"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"

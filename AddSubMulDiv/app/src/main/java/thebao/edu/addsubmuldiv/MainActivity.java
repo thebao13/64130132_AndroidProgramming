@@ -1,6 +1,8 @@
 package thebao.edu.addsubmuldiv;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,4 +23,86 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
     }
+
+
+
+    void XuLyCong (View v) {
+
+        EditText editTextSo1= (EditText)findViewById(R.id.edtSo1);
+        EditText editTextSo2 = (EditText)findViewById(R.id.edtSo2);
+
+        String soThu1 = editTextSo1.getText().toString();
+        String soThu2 = editTextSo2.getText().toString();
+
+        float SoA = Float.parseFloat(soThu1);
+        float SoB = Float.parseFloat(soThu2);
+
+        float Tong  = SoA + SoB;
+
+        EditText editTextKQ = (EditText)findViewById(R.id.edtKetQua);
+
+        String chuoiKQ = String.valueOf(Tong);
+
+        editTextKQ.setText(chuoiKQ);
+    }
+    void XuLyTru (View v) {
+
+        EditText editTextSo1= (EditText)findViewById(R.id.edtSo1);
+        EditText editTextSo2 = (EditText)findViewById(R.id.edtSo2);
+
+        String soThu1 = editTextSo1.getText().toString();
+        String soThu2 = editTextSo2.getText().toString();
+
+        float SoA = Float.parseFloat(soThu1);
+        float SoB = Float.parseFloat(soThu2);
+
+        float Tong  = SoA - SoB;
+
+        EditText editTextKQ = (EditText)findViewById(R.id.edtKetQua);
+
+        String chuoiKQ = String.valueOf(Tong);
+
+        editTextKQ.setText(chuoiKQ);
+    }
+    void XuLyNhan (View v) {
+
+        EditText editTextSo1= (EditText)findViewById(R.id.edtSo1);
+        EditText editTextSo2 = (EditText)findViewById(R.id.edtSo2);
+
+        String soThu1 = editTextSo1.getText().toString();
+        String soThu2 = editTextSo2.getText().toString();
+
+        float SoA = Float.parseFloat(soThu1);
+        float SoB = Float.parseFloat(soThu2);
+
+        float Tong  = SoA  * SoB;
+
+        EditText editTextKQ = (EditText)findViewById(R.id.edtKetQua);
+
+        String chuoiKQ = String.valueOf(Tong);
+
+        editTextKQ.setText(chuoiKQ);
+    }
+    void XuLyChia (View v) {
+
+        EditText editTextSo1= (EditText)findViewById(R.id.edtSo1);
+        EditText editTextSo2 = (EditText)findViewById(R.id.edtSo2);
+
+        String soThu1 = editTextSo1.getText().toString();
+        String soThu2 = editTextSo2.getText().toString();
+
+        float SoA = Float.parseFloat(soThu1);
+        float SoB = Float.parseFloat(soThu2);
+
+        float Tong  = SoA / SoB;
+
+        EditText editTextKQ = (EditText)findViewById(R.id.edtKetQua);
+
+        String chuoiKQ = String.valueOf(Tong);
+
+        editTextKQ.setText(chuoiKQ);
+    }
+
+
+
 }
