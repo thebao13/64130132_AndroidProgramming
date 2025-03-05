@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    void XuLyCong (View v) {
+    public void XuLyCong (View v) {
 
         EditText editTextSo1= (EditText)findViewById(R.id.edtSo1);
         EditText editTextSo2 = (EditText)findViewById(R.id.edtSo2);
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
         editTextKQ.setText(chuoiKQ);
     }
-    void XuLyTru (View v) {
+    public void XuLyTru(View v) { // Thêm kiểu trả về 'void' ở đây
 
         EditText editTextSo1= (EditText)findViewById(R.id.edtSo1);
         EditText editTextSo2 = (EditText)findViewById(R.id.edtSo2);
@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
 
         editTextKQ.setText(chuoiKQ);
     }
-    void XuLyNhan (View v) {
+    public void XuLyNhan (View v) {
 
         EditText editTextSo1= (EditText)findViewById(R.id.edtSo1);
         EditText editTextSo2 = (EditText)findViewById(R.id.edtSo2);
@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
 
         editTextKQ.setText(chuoiKQ);
     }
-    void XuLyChia (View v) {
+    public void XuLyChia (View v) {
 
         EditText editTextSo1= (EditText)findViewById(R.id.edtSo1);
         EditText editTextSo2 = (EditText)findViewById(R.id.edtSo2);
