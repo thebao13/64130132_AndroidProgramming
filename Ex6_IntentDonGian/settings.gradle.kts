@@ -21,4 +21,3 @@ dependencyResolutionManagement {
 
 rootProject.name = "Ex6_IntentDonGian"
 include(":app")
- 
