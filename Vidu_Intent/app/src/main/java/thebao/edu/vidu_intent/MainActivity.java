@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void ChuyenManHinh(View v){
-        Intent iManHinhKhac = new Intent(packageContext: this, SubActivityOne.class);
-        startActivities(iManHinhKhac);
+        Intent iManHinhKhac = new Intent(this, SubActivityOne.class);
+        startActivity(iManHinhKhac);
     }
 }
