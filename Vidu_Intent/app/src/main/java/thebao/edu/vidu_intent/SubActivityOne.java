@@ -1,6 +1,8 @@
 package thebao.edu.vidu_intent;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,5 +22,9 @@ public class SubActivityOne extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+    public void QuayVe (View v){
+        Intent iManHinhCHINH = new Intent(this,MainActivity.class);
+        startActivity(iManHinhCHINH);
     }
 }
