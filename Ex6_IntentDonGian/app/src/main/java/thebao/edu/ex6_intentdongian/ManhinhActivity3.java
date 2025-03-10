@@ -1,6 +1,8 @@
     package thebao.edu.ex6_intentdongian;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,5 +22,14 @@ public class ManhinhActivity3 extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+    public void QuayVe(View v){
+        Intent iManhinhChinh = new Intent(this, MainActivity.class);
+        startActivity(iManhinhChinh);
+
+
+    }public void ManHinh2(View v){
+        Intent  iManHinh2 = new Intent(this, ManhinhActivity2.class);
+        startActivity(iManHinh2);
     }
 }

@@ -1,6 +1,8 @@
 package thebao.edu.ex6_intentdongian;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,4 +23,15 @@ public class ManhinhActivity2 extends AppCompatActivity {
             return insets;
         });
     }
+
+    public void QuayVe(View v){
+        Intent iManhinhChinh = new Intent(this, MainActivity.class);
+        startActivity(iManhinhChinh);
+    }
+    public void ManHinh3(View v){
+        Intent  iManHinh3 = new Intent(this, ManhinhActivity3.class);
+        startActivity(iManHinh3);
+    }
+
+
 }

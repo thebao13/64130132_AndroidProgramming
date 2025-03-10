@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(iManHinh2);
     }
     public void ManHinh3(View v){
-        Intent  iManHinh3 = new Intent(this, ManhinhActivity2.class);
+        Intent  iManHinh3 = new Intent(this, ManhinhActivity3.class);
         startActivity(iManHinh3);
     }
 }
