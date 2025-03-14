@@ -18,6 +18,11 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
         ListView lisviewNNLT;
         ArrayList<String> dsNNLT;
+        //String myphon[] = {"item1", "item2", ...}
+        //Arraydapter<String> adaper;
+        // Bắt sự kiên onclic
+        // adaper = new adaper <>(mani.this, layout simple_1 , myphon)
+    //set.onItemclic
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +54,12 @@ public class MainActivity extends AppCompatActivity {
 
                 // làm theo yêu cầu bất kì đối với giá trị get được/
                 Toast.makeText(MainActivity.this, giatriduocchon, Toast.LENGTH_LONG).show();
+            }
+        });
+        lisviewNNLT.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
             }
         });
     }
