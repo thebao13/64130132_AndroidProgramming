@@ -31,5 +31,6 @@ public class MainActivity extends AppCompatActivity {
     public void ManHinh3(View v){
         Intent  iManHinh3 = new Intent(this, ManhinhActivity3.class);
         startActivity(iManHinh3);
+
     }
 }

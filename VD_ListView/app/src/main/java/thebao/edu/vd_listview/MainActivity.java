@@ -17,6 +17,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
         ListView lisviewNNLT;
+        ArrayAdapter<String> arrayAdapterNNLT;
         ArrayList<String> dsNNLT;
         //String myphon[] = {"item1", "item2", ...}
         //Arraydapter<String> adaper;
@@ -41,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         dsNNLT.add("C++");
         dsNNLT.add("HTML");
         dsNNLT.add("PHP");
-        ArrayAdapter<String> arrayAdapterNNLT;
+
         arrayAdapterNNLT = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,dsNNLT);
         lisviewNNLT.setAdapter(arrayAdapterNNLT);
         lisviewNNLT.setOnItemClickListener(new  AdapterView.OnItemClickListener() {
