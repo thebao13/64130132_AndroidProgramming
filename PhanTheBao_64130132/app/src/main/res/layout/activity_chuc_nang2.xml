@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="5dp"
+    tools:context=".ActivityChucNang2">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:background="@drawable/wavy_shape"
+        android:layout_height="170dp">
+
+
+        <TextView
+            android:layout_width="96dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="100dp"
+            android:layout_gravity="center"
+            android:text="Quiz"
+            android:textSize="40dp"
+            android:textStyle="bold" />
+
+
+        <ImageView
+
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/logo50nam"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Mốc thời gian Chiến dịch
+        HỒ CHÍ MINH - Toàn thắng"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="Ngày"
+            android:textSize="25dp"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/edtngay"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="50dp"
+            android:background="@drawable/edittext"
+            android:textSize="25dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="Tháng"
+            android:textSize="25dp"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/edtthang"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="35dp"
+            android:background="@drawable/edittext"
+            android:textSize="25dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="Năm"
+            android:textSize="25dp"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/edtnam"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="55dp"
+            android:background="@drawable/edittext"
+            android:textSize="25dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/btnkiemtra"
+            android:onClick="KiemTra"
+            android:layout_width="180dp"
+            android:layout_height="70dp"
+            android:layout_marginEnd="20dp"
+            android:backgroundTint="#000000"
+            android:background="@drawable/custom"
+            android:text="Kiểm tra"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/hienthi"
+            android:layout_width="200dp"
+            android:layout_height="70dp"
+            android:background="@drawable/custom"
+            android:gravity="center"
+            android:text="Kết quả"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+
+</LinearLayout>

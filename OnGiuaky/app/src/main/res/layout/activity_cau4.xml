@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Cau4">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/clothingCard"
+        android:layout_width="326dp"
+        android:layout_height="166dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="237dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="328dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Tên -->
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Họ Tên Phan Thế Bảo"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <!-- Ngày tháng năm sinh -->
+            <TextView
+                android:id="@+id/tv_dob"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Ngày sinh: 13/03/2004"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <!-- Quê quán -->
+            <TextView
+                android:id="@+id/tv_hometown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Quê quán: Phú Yên"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <!-- Môn học yêu thích -->
+            <TextView
+                android:id="@+id/tv_subject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Học Phần Lập trình di động"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

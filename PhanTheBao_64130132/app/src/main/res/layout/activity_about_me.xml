@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroud"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="5dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:background="@drawable/wavy_shape"
+        android:layout_height="170dp">
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:layout_gravity="center"
+            android:text="About Me"
+            android:textSize="40dp"
+            android:textStyle="bold" />
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/logo50nam"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/profile_image"
+        android:layout_width="320dp"
+        android:layout_height="320dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+
+        android:scaleType="centerCrop"
+        android:src="@drawable/avt" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/clothingCard"
+        android:layout_width="326dp"
+        android:layout_height="166dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="328dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="20dp">
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Tên -->
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Họ và Tên: Phan Thế Bảo"
+                android:textColor="#000000"
+                android:textSize="25sp" />
+
+            <!-- Ngày tháng năm sinh -->
+            <TextView
+                android:id="@+id/tv_dob"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Ngày sinh: 13/03/2004"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <!-- Quê quán -->
+            <TextView
+                android:id="@+id/tv_hometown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Quê quán: Phú Yên"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <!-- Môn học yêu thích -->
+            <TextView
+                android:id="@+id/tv_subject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Học Phần Lập trình di động"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
