@@ -9,6 +9,10 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:background="#89E2ED"
+        android:gravity="center"
+        android:textColor="#F833FD"
+        android:text="Home Fragment "
+        android:textSize="40dp" />
 
 </FrameLayout>
