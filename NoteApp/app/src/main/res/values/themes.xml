@@ -4,6 +4,23 @@
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
-
     <style name="Theme.NoteApp" parent="Base.Theme.NoteApp" />
+
+
+    <style name="Theme.NoteAppNoActionBar" parent="Theme.MaterialComponents.DayNight.NoActionBar" >
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/mau1</item>
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+
+
+
+    <style name="Base.Theme.Notes.NoActionBar" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/mau2</item>
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+
 </resources>
