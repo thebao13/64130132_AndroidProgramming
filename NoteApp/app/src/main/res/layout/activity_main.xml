@@ -9,10 +9,24 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+
+    <androidx.appcompat.widget.SearchView
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/search_view"
+        android:layout_margin="20dp"
+        android:background="@color/white"
+        app:queryHint="Tìm Kiếm Ghi Chú ..."
+        app:iconifiedByDefault="false"
+        android:layout_alignParentTop="true"/>
+
+
+
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/recycler_view"
+        android:layout_below="@+id/search_view"
         android:layout_margin="8dp"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
