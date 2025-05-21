@@ -2,6 +2,8 @@ package thebao.edu.noteapp;
 
 import static java.util.Locale.filter;
 
+import static thebao.edu.noteapp.R.id.pin;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -162,32 +164,30 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
 
     @Override
     public boolean onMenuItemClick(MenuItem item) {
-        switch (item.getItemId()){
-            case R.id.pin:
-                if (selected_notes.isPinned()){
-                database.dao().pin(selected_notes.getID(),false);
-                    Toast.makeText(this,"Gỡ ghim",  Toast.LENGTH_LONG).show();
-                }
-                else {
-                    database.dao().pin(selected_notes.getID(),true);
-                    Toast.makeText(this,"Đã ghim",  Toast.LENGTH_LONG).show();
-                }
+        int id = item.getItemId();
 
-                notes.clear();
-                notes.addAll(database.dao().getAll());
-                notesListAdapter.notifyDataSetChanged();
-                return true;
+        if (id == R.id.pin) {
+            if (selected_notes.isPinned()) {
+                database.dao().pin(selected_notes.getID(), false);
+                Toast.makeText(this, "Gỡ ghim", Toast.LENGTH_LONG).show();
+            } else {
+                database.dao().pin(selected_notes.getID(), true);
+                Toast.makeText(this, "Đã ghim", Toast.LENGTH_LONG).show();
+            }
 
-            case R.id.del:
-                database.dao().delete(selected_notes);
-                notes.remove(selected_notes);
-                notesListAdapter.notifyDataSetChanged();
-                Toast.makeText(this,"Xóa ghi chú !!!",  Toast.LENGTH_LONG).show();
-                return true;
+            notes.clear();
+            notes.addAll(database.dao().getAll());
+            notesListAdapter.notifyDataSetChanged();
+            return true;
 
-            default:
-                return false;
+        } else if (id == R.id.del) {
+            database.dao().delete(selected_notes);
+            notes.remove(selected_notes);
+            notesListAdapter.notifyDataSetChanged();
+            Toast.makeText(this, "Xóa ghi chú !!!", Toast.LENGTH_LONG).show();
+            return true;
         }
 
+        return false;
     }
 }
