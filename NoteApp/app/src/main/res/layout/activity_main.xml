@@ -5,22 +5,14 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#C3C2C2"
+    android:background="#FFF8E7"
+    android:padding="10dp"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
 
-    <androidx.appcompat.widget.SearchView
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:id="@+id/search_view"
-        android:layout_margin="20dp"
-        android:background="@color/white"
-        app:queryHint="Tìm Kiếm Ghi Chú ..."
-        app:iconifiedByDefault="false"
-        android:layout_alignParentTop="true"/>
 
-
+    
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
@@ -33,7 +25,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_margin="25dp"
+        android:layout_margin="35dp"
+        app:fabSize="auto"
         android:src="@drawable/baseline_add_24"
         android:layout_alignParentEnd="true"
         android:id="@+id/fab_add_btn"/>

@@ -6,10 +6,10 @@
 
 
 
-    <color name="mau1">#00BCD4</color>
-    <color name="mau2">#FF5722</color>
-    <color name="mau3">#FFC107</color>
-    <color name="mau4">#3F51B5</color>
-    <color name="mau5">#E91E63</color>
-    <color name="mau6">#4CAF50</color>
+    <color name="mau1">#FFE0B2</color>
+    <color name="mau2">#E1BEE7</color>
+    <color name="mau3">#F8BBD0</color>
+    <color name="mau4">#C8E6C9</color>
+    <color name="mau5">#B3E5FC</color>
+    <color name="mau6">#AAF0D1</color>
 </resources>

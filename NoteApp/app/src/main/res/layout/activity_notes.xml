@@ -5,29 +5,44 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/grey"
+    android:background="#FFF8E7"
     android:orientation="vertical"
+    android:paddingTop="40dp"
     tools:context=".NotesActivity">
 
     <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tool_bar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:id="@+id/tool_bar">
-        
-        
+        android:layout_marginBottom="30dp">
+
+
         <RelativeLayout
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <TextView
+                android:id="@+id/title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:paddingStart="16dp"
+                android:text="Ghi Chú"
+                android:textColor="#F44336"
+                android:textSize="50sp"
+                android:textStyle="bold" />
 
-        <ImageView
-            android:id="@+id/image_view_save"
-            android:layout_alignParentEnd="true"
-            android:layout_width="?attr/actionBarSize"
-            android:layout_height="?attr/actionBarSize"
-            android:src="@drawable/save"
-            android:padding="10dp"
-            android:background="@android:color/transparent"/>
+
+            <ImageView
+                android:id="@+id/image_view_save"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_alignParentEnd="true"
+                android:background="@android:color/transparent"
+                android:padding="10dp"
+                android:src="@drawable/save" />
 
         </RelativeLayout>
 
@@ -36,23 +51,31 @@
 
 
     <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/edit_text_tittle"
-        android:hint="Tittle"
-        android:textColorHint="@color/white"
-        android:padding="10dp"
-        android:textStyle="bold"
-        android:singleLine="true"
-        android:textSize="20sp"/>
-    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/ed_notes"
-        android:hint="Add Notes : "
-        android:textColorHint="@color/white"
+        android:hint="Tiêu đề"
         android:padding="10dp"
-        android:textStyle="normal"
         android:singleLine="true"
-        android:textSize="18sp"/>
+        android:textColorHint="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/ed_notes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="top|start"
+        android:hint="Nhập ghi chú ..."
+        android:inputType="textMultiLine"
+        android:lines="5"
+        android:maxLines="100"
+
+        android:overScrollMode="always"
+        android:padding="10dp"
+        android:scrollbars="vertical"
+        android:textColorHint="@color/black"
+        android:textSize="18sp"
+        android:textStyle="normal" />
+
 </LinearLayout>
