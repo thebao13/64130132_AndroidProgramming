@@ -4,7 +4,12 @@ import static java.util.Locale.filter;
 
 import static thebao.edu.noteapp.R.id.pin;
 
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import com.google.android.material.navigation.NavigationView;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
@@ -12,9 +17,12 @@ import android.text.TextWatcher;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.PopupMenu;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
-
+import androidx.core.view.GravityCompat;
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -44,6 +52,10 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
 
      Notes selected_notes;
 
+    DrawerLayout drawerLayout;
+    NavigationView navigationView;
+    Toolbar toolbar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +70,36 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
         database = RoomDB.getInstance(this);
         notes= database.dao().getAll();
         updateRecycler(notes);
+
+
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        drawerLayout = findViewById(R.id.drawer_layout);
+        navigationView = findViewById(R.id.navigation_view);
+
+// Mở Navigation Drawer khi nhấn nút Home
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.menu); // icon menu
+
+// Xử lý khi chọn item trong Navigation Drawer
+        navigationView.setNavigationItemSelectedListener(item -> {
+            int id = item.getItemId();
+
+            if (id == R.id.nav_settings) {
+                showBackgroundPickerDialog();
+            } else if (id == R.id.nav_share) {
+                Toast.makeText(this, "Chia sẻ", Toast.LENGTH_SHORT).show();
+            } else if (id == R.id.nav_about) {
+                Intent intent = new Intent(MainActivity.this, InfoActivity.class);
+                startActivity(intent);
+            } else if (id == R.id.nav_exit) {
+                finish();
+            }
+
+            drawerLayout.closeDrawer(GravityCompat.START);
+            return true;
+        });
 
 
         fab_btn.setOnClickListener(new View.OnClickListener() {
@@ -82,6 +124,11 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
                 return false;
             }
         });
+
+        int savedBg = getSharedPreferences("settings", MODE_PRIVATE).getInt("background", -1);
+        if (savedBg != -1) {
+            applyBackground(savedBg);
+        }
 
     }
 
@@ -127,6 +174,7 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
             }
 
     }
+
 
     private void updateRecycler(List<Notes> notes){
         recyclerView.setHasFixedSize(true);
@@ -186,10 +234,59 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
             database.dao().delete(selected_notes);
             notes.remove(selected_notes);
             notesListAdapter.notifyDataSetChanged();
-            Toast.makeText(this, "Xóa ghi chú !!!", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Đã Xóa ghi chú !!!", Toast.LENGTH_LONG).show();
             return true;
         }
 
         return false;
     }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            drawerLayout.openDrawer(GravityCompat.START);
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    private void showBackgroundPickerDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        View view = getLayoutInflater().inflate(R.layout.dialog_background_picker, null);
+        LinearLayout container = view.findViewById(R.id.background_container);
+
+        // Danh sách các ảnh nền (tên trong drawable)
+        int[] backgrounds = { R.drawable.bg1, R.drawable.bg2, R.drawable.bg3,
+                              R.drawable.bg4, R.drawable.bg5 };
+
+        for (int bg : backgrounds) {
+            ImageView imageView = new ImageView(this);
+            imageView.setImageResource(bg);
+            imageView.setAdjustViewBounds(true);
+            imageView.setPadding(0, 20, 0, 20);
+
+            imageView.setOnClickListener(v -> {
+                saveBackgroundPreference(bg);
+                applyBackground(bg);
+            });
+
+            container.addView(imageView);
+        }
+
+        builder.setView(view);
+        builder.setTitle("Chọn ảnh nền");
+        builder.setNegativeButton("Đóng", null);
+        builder.show();
+    }
+    private void saveBackgroundPreference(int bgResId) {
+        getSharedPreferences("settings", MODE_PRIVATE)
+                .edit()
+                .putInt("background", bgResId)
+                .apply();
+    }
+
+    private void applyBackground(int bgResId) {
+        RelativeLayout layout = findViewById(R.id.layout_nen); // bạn cần gán id cho layout
+        layout.setBackgroundResource(bgResId);
+    }
 }
+

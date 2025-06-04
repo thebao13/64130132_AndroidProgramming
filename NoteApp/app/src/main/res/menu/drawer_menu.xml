@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/nav_settings"
+          android:title="Cài đặt"
+          android:icon="@drawable/settings"/>
+    <item android:id="@+id/nav_share"
+          android:title="Chia sẻ"
+          android:icon="@drawable/share"/>
+    <item android:id="@+id/nav_about"
+          android:title="Giới thiệu ứng dụng"
+          android:icon="@drawable/info"/>
+    <item  android:id="@+id/nav_exit"
+           android:title="Thoát"
+           android:icon="@drawable/close"/>
+</menu>

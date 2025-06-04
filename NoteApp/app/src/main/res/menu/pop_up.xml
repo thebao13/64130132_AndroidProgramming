@@ -3,9 +3,9 @@
 
     <item
         android:id="@+id/pin"
-        android:title="Pin/Unpin"/>
+        android:title="Ghim / Gỡ Ghim"/>
     <item
         android:id="@+id/del"
-        android:title="Delete"/>
+        android:title="Xóa !!!  "/>
 
 </menu>
